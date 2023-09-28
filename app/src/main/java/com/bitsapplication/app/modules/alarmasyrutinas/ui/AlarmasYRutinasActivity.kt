@@ -1,20 +1,34 @@
 package com.bitsapplication.app.modules.alarmasyrutinas.ui
 
+import android.os.Bundle
 import android.view.View
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.viewModels
 import com.bitsapplication.app.R
 import com.bitsapplication.app.appcomponents.base.BaseActivity
 import com.bitsapplication.app.databinding.ActivityAlarmasYRutinasBinding
-import com.bitsapplication.app.modules.alarmasyrutinas.`data`.model.GridtitleRowModel
+import com.bitsapplication.app.modules.alarmasyrutinas.data.model.GridtitleRowModel
 import com.bitsapplication.app.modules.alarmasyrutinas.data.model.RowRutinasModel
-import com.bitsapplication.app.modules.alarmasyrutinas.`data`.viewmodel.AlarmasYRutinasVM
-import kotlin.Int
-import kotlin.String
-import kotlin.Unit
+import com.bitsapplication.app.modules.alarmasyrutinas.data.viewmodel.AlarmasYRutinasVM
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+
 
 class AlarmasYRutinasActivity :
     BaseActivity<ActivityAlarmasYRutinasBinding>(R.layout.activity_alarmas_y_rutinas) {
+
   private val viewModel: AlarmasYRutinasVM by viewModels<AlarmasYRutinasVM>()
+
+
+  var mAddFab: ExtendedFloatingActionButton? = null
+  var mAddAlarmFab: ExtendedFloatingActionButton? = null
+  var mAddRutineFab: ExtendedFloatingActionButton? = null
+  var mStudySessionFab: ExtendedFloatingActionButton? = null
+  var addAlarmActionText: TextView? = null
+  var addRutineActionText: TextView? = null
+  var studySessionActionText: TextView? = null
+  var isAllFabsVisible: Boolean? = null
 
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
@@ -44,6 +58,75 @@ class AlarmasYRutinasActivity :
       rutinaAdapter.updateData(it)
     }
     binding.alarmasYRutinasVM = viewModel
+
+    // Register all the FABs with their IDs This FAB button is the Parent
+    mAddFab = findViewById<ExtendedFloatingActionButton>(R.id.extended_fab)
+
+    // FAB button
+    mAddAlarmFab = findViewById<ExtendedFloatingActionButton>(R.id.add_alarm_fab)
+    mAddRutineFab = findViewById<ExtendedFloatingActionButton>(R.id.add_rutine)
+    mStudySessionFab = findViewById<ExtendedFloatingActionButton>(R.id.study_session)
+
+    // Also register the action name text, of all the FABs.
+    addAlarmActionText = findViewById<TextView>(R.id.add_alarm_action_text)
+    addRutineActionText = findViewById<TextView>(R.id.add_rutine_action_text)
+    studySessionActionText = findViewById<TextView>(R.id.study_session_text)
+
+
+    mAddAlarmFab?.visibility = View.GONE
+    mAddRutineFab?.visibility = View.GONE
+    mStudySessionFab?.visibility = View.GONE
+
+    addAlarmActionText?.visibility = View.GONE
+    addRutineActionText?.visibility = View.GONE
+    studySessionActionText?.visibility = View.GONE
+
+    isAllFabsVisible = false
+
+    mAddFab?.setOnClickListener(View.OnClickListener { view: View? ->
+      isAllFabsVisible = if (!isAllFabsVisible!!) {
+
+        mAddAlarmFab?.show()
+        mAddRutineFab?.show()
+        mStudySessionFab?.show()
+        addAlarmActionText?.setVisibility(View.VISIBLE)
+        addRutineActionText?.setVisibility(View.VISIBLE)
+        studySessionActionText?.setVisibility(View.VISIBLE)
+
+        true
+      } else {
+
+        mAddAlarmFab?.hide()
+        mAddRutineFab?.hide()
+        mStudySessionFab?.hide()
+        addAlarmActionText?.setVisibility(View.GONE)
+        addRutineActionText?.setVisibility(View.GONE)
+        studySessionActionText?.setVisibility(View.GONE)
+
+        false
+      }
+    })
+
+    mAddRutineFab?.setOnClickListener(
+      View.OnClickListener { view: View? ->
+        Toast.makeText(
+          this@AlarmasYRutinasActivity, "Añadir Rutina", Toast.LENGTH_SHORT
+        ).show()
+      })
+
+    mAddAlarmFab?.setOnClickListener(
+      View.OnClickListener { view: View? ->
+        Toast.makeText(
+          this@AlarmasYRutinasActivity, "Añadir Alarma", Toast.LENGTH_SHORT
+        ).show()
+      })
+
+    mStudySessionFab?.setOnClickListener(
+      View.OnClickListener { view: View? ->
+        Toast.makeText(
+          this@AlarmasYRutinasActivity, "Sesion de estudio", Toast.LENGTH_SHORT
+        ).show()
+      })
   }
 
   override fun setUpClicks(): Unit {

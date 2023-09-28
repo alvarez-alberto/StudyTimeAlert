@@ -39,4 +39,5 @@
     <string name="lbl_minutos">Minutos</string>
     <string name="lbl" />
     <string name="lbl_segundos">Segundos</string>
+    <string name="page_tittle_crear_rutina">Crear Rutina</string>
 </resources>

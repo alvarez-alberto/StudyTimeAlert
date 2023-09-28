@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearCrearRutina"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700"
+        >
+
+        <LinearLayout
+            android:id="@+id/linearDeviceDevicef"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout_alarmas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/tob_bar_crear_rutina"
+                    style="@style/txtSolidOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:menu="@menu/top_abb_bar_crear"
+                    app:navigationIcon="@drawable/baseline_arrow_back_24"
+                    app:title="@string/page_tittle_crear_rutina" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:layout_width="216dp"
+                android:layout_height="144dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="145dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center_horizontal"
+                        android:text="Inicio"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+                            android:clipChildren="true"> <!-- Define tu recurso de fondo personalizado -->
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="07"
+                                android:textColor="#000000"
+                                android:textSize="57sp"
+                                style="@style/btnSolidRoundedOutline"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="24dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text=":"
+                            android:textColor="#1D1B20"
+                            android:textSize="57sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+                            android:clipChildren="true">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="00"
+                                android:textColor="#1D1B20"
+                                android:textSize="57sp"
+                                style="@style/btnSolidRoundedOutline"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:clipChildren="true">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clipChildren="true">
+
+                            <TextView
+                                android:id="@+id/txtAM_inicio"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="AM"
+                                android:textSize="16sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:layout_gravity="center_horizontal"
+                                android:backgroundTint="@color/selector_am_pm"
+                                /> <!-- Aplica el selector aquí -->
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clipChildren="true">
+
+                            <TextView
+                                android:id="@+id/txtPM_inicio"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="PM"
+                                android:textSize="16sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:layout_gravity="center_horizontal"
+                                android:backgroundTint="@color/selector_am_pm" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="216dp"
+                android:layout_height="144dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="145dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center_horizontal"
+                        android:text="Fin"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+                            android:clipChildren="true"> <!-- Define tu recurso de fondo personalizado -->
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="07"
+                                android:textColor="#000000"
+                                android:textSize="57sp"
+                                style="@style/btnSolidRoundedOutline"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="24dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text=":"
+                            android:textColor="#1D1B20"
+                            android:textSize="57sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+                            android:clipChildren="true"> <!-- Define tu recurso de fondo personalizado -->
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="00"
+                                android:textColor="#1D1B20"
+                                android:textSize="57sp"
+                                style="@style/btnSolidRoundedOutline"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:clipChildren="true">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                           android:clipChildren="true">
+
+                            <TextView
+                                android:id="@+id/txtAM"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="AM"
+                                android:textSize="16sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:layout_gravity="center_horizontal"
+                                android:backgroundTint="@color/selector_am_pm"
+                                /> <!-- Aplica el selector aquí -->
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clipChildren="true">
+
+                            <TextView
+                                android:id="@+id/txtPM"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="PM"
+                                android:textSize="16sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:layout_gravity="center_horizontal"
+                                android:backgroundTint="@color/selector_am_pm" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearRepetir"
+                style="@style/groupStylecornerRadius_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginTop="@dimen/_22pxv"
+                android:layout_marginEnd="@dimen/_15pxh"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtRepetir"
+                    style="@style/txtOxygenbold18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="Repetir"/>
+
+                <LinearLayout
+                    android:id="@+id/linearRowframe325"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_1pxh"
+                    android:layout_marginTop="@dimen/_5pxv"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtFrame325"
+                        style="@style/txtSolidRounded"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.14"
+                        android:ellipsize="end"
+                        android:letterSpacing="0.03"
+                        android:lineSpacingExtra="@dimen/_2pxh"
+                        android:paddingStart="@dimen/_7pxh"
+                        android:paddingTop="@dimen/_13pxv"
+                        android:paddingEnd="@dimen/_8pxh"
+                        android:paddingBottom="@dimen/_13pxv"
+                        android:singleLine="true"
+                        android:text="Dom"/>
+
+                    <TextView
+                        android:id="@+id/txtFrame326"
+                        style="@style/txtSolidRounded_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8pxh"
+                        android:layout_weight="0.14"
+                        android:ellipsize="end"
+                        android:letterSpacing="0.03"
+                        android:lineSpacingExtra="@dimen/_2pxh"
+                        android:paddingStart="@dimen/_10pxh"
+                        android:paddingTop="@dimen/_13pxv"
+                        android:paddingEnd="@dimen/_10pxh"
+                        android:paddingBottom="@dimen/_13pxv"
+                        android:singleLine="true"
+                        android:text="Lun"/>
+
+                    <TextView
+                        android:id="@+id/txtFrame327"
+                        style="@style/txtSolidRounded_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8pxh"
+                        android:layout_weight="0.14"
+                        android:ellipsize="end"
+                        android:letterSpacing="0.03"
+                        android:lineSpacingExtra="@dimen/_2pxh"
+                        android:paddingStart="@dimen/_9pxh"
+                        android:paddingTop="@dimen/_13pxv"
+                        android:paddingEnd="@dimen/_9pxh"
+                        android:paddingBottom="@dimen/_13pxv"
+                        android:singleLine="true"
+                        android:text="Mar"/>
+
+                    <TextView
+                        android:id="@+id/txtFrame328"
+                        style="@style/txtSolidRounded_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8pxh"
+                        android:layout_weight="0.14"
+                        android:ellipsize="end"
+                        android:letterSpacing="0.03"
+                        android:lineSpacingExtra="@dimen/_2pxh"
+                        android:paddingStart="@dimen/_10pxh"
+                        android:paddingTop="@dimen/_13pxv"
+                        android:paddingEnd="@dimen/_10pxh"
+                        android:paddingBottom="@dimen/_13pxv"
+                        android:singleLine="true"
+                        android:text="Mie"/>
+
+                    <TextView
+                        android:id="@+id/txtFrame329"
+                        style="@style/txtSolidRounded_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8pxh"
+                        android:layout_weight="0.14"
+                        android:ellipsize="end"
+                        android:letterSpacing="0.03"
+                        android:lineSpacingExtra="@dimen/_2pxh"
+                        android:paddingStart="@dimen/_10pxh"
+                        android:paddingTop="@dimen/_13pxv"
+                        android:paddingEnd="@dimen/_10pxh"
+                        android:paddingBottom="@dimen/_13pxv"
+                        android:singleLine="true"
+                        android:text="Jue"/>
+
+                    <TextView
+                        android:id="@+id/txtFrame330"
+                        style="@style/txtSolidRounded_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8pxh"
+                        android:layout_weight="0.14"
+                        android:ellipsize="end"
+                        android:letterSpacing="0.03"
+                        android:lineSpacingExtra="@dimen/_2pxh"
+                        android:paddingStart="@dimen/_11pxh"
+                        android:paddingTop="@dimen/_13pxv"
+                        android:paddingEnd="@dimen/_11pxh"
+                        android:paddingBottom="@dimen/_13pxv"
+                        android:singleLine="true"
+                        android:text="Vie" />
+
+                    <TextView
+                        android:id="@+id/txtFrame331"
+                        style="@style/txtSolidRounded_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8pxh"
+                        android:layout_weight="0.14"
+                        android:ellipsize="end"
+                        android:letterSpacing="0.03"
+                        android:lineSpacingExtra="@dimen/_2pxh"
+                        android:paddingStart="@dimen/_10pxh"
+                        android:paddingTop="@dimen/_13pxv"
+                        android:paddingEnd="@dimen/_10pxh"
+                        android:paddingBottom="@dimen/_13pxv"
+                        android:singleLine="true"
+                        android:text="Sab" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearColumntypeanything"
+                style="@style/groupStyledeep_purple_100cornerRadius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginTop="@dimen/_21pxv"
+                android:layout_marginEnd="@dimen/_15pxh"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/editTypeanything"
+                    style="@style/txtInterregular25"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_12pxv"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginBottom="@dimen/_94pxv"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:lineSpacingExtra="@dimen/_6pxh"
+                    android:singleLine="true"
+                    android:text="Descripción..." />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -34,4 +34,9 @@
     <string name="content_description_save">guardar</string>
     <string name="more">más</string>
     <string name="content_description_more">más</string>
+    <string name="page_tittle_sesion_estudio">Sesión de estudio</string>
+    <string name="lbl_focus">Focus</string>
+    <string name="lbl_minutos">Minutos</string>
+    <string name="lbl" />
+    <string name="lbl_segundos">Segundos</string>
 </resources>

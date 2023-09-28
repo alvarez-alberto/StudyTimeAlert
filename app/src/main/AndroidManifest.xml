@@ -15,5 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.bitsapplication.app.modules.sesiondeestudio.ui.SesionDeEstudioActivity"
+            android:screenOrientation="portrait"
+            android:label="Sesion de estudio"
+            android:exported="true">
+
+        </activity>
     </application>
 </manifest>

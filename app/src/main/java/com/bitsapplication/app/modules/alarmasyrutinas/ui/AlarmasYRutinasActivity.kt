@@ -1,6 +1,6 @@
 package com.bitsapplication.app.modules.alarmasyrutinas.ui
 
-import android.os.Bundle
+import android.content.Intent
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
@@ -11,8 +11,8 @@ import com.bitsapplication.app.databinding.ActivityAlarmasYRutinasBinding
 import com.bitsapplication.app.modules.alarmasyrutinas.data.model.GridtitleRowModel
 import com.bitsapplication.app.modules.alarmasyrutinas.data.model.RowRutinasModel
 import com.bitsapplication.app.modules.alarmasyrutinas.data.viewmodel.AlarmasYRutinasVM
+import com.bitsapplication.app.modules.sesiondeestudio.ui.SesionDeEstudioActivity
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class AlarmasYRutinasActivity :
@@ -123,11 +123,10 @@ class AlarmasYRutinasActivity :
 
     mStudySessionFab?.setOnClickListener(
       View.OnClickListener { view: View? ->
-        Toast.makeText(
-          this@AlarmasYRutinasActivity, "Sesion de estudio", Toast.LENGTH_SHORT
-        ).show()
+        irASegundaActividad(view)
       })
   }
+
 
   override fun setUpClicks(): Unit {
   }
@@ -148,6 +147,11 @@ class AlarmasYRutinasActivity :
   ): Unit {
     when(view.id) {
     }
+  }
+
+  fun irASegundaActividad(view: View?) {
+    val intent = Intent(this, SesionDeEstudioActivity::class.java)
+    startActivity(intent)
   }
 
   companion object {

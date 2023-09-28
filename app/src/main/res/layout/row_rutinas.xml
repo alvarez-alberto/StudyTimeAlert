@@ -1,0 +1,42 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="RowRutinas" type="com.bitsapplication.app.modules.alarmasyrutinas.data.model.RowRutinasModel"/>
+    </data>
+    <LinearLayout
+        android:id="@+id/linearCardRutina"
+        style="@style/groupStylelime_200cornerRadius"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight="0.5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtHeader"
+            style="@style/txtRobotomedium16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_19pxv"
+            android:layout_marginBottom="@dimen/_17pxv"
+            android:layout_weight="0.8"
+            android:ellipsize="end"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="@dimen/_3pxh"
+            android:singleLine="true"
+            android:text="@{RowRutinas.txtTitle}"
+            tools:text="@{RowRutinas.txtTitle}" />
+
+        <ImageView
+            android:id="@+id/imageCabin"
+            android:layout_width="@dimen/_22pxh"
+            android:layout_height="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_13pxh"
+            android:layout_marginTop="@dimen/_17pxv"
+            android:layout_marginEnd="@dimen/_14pxh"
+            android:layout_marginBottom="@dimen/_19pxv"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_clock"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/img_clock" />
+    </LinearLayout>
+</layout>

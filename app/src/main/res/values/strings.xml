@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">bit_s_application4</string>
+    <string name="loading">Loading…</string>
+    <string name="no_internet_connection">No internet connection!</string>
+<string name="lbl_alarmas">Alarmas</string>
+<string name="lbl_07_00">07:00</string>
+<string name="lbl_09_00">09:00</string>
+<string name="lbl_entrega_calculo">Entrega Calculo</string>
+<string name="lbl_07_30">07:30</string>
+<string name="lbl_estudiar_ux">Estudiar UX</string>
+<string name="lbl_07_00am">07:00AM</string>
+<string name="lbl_tarea">Tarea</string>
+<string name="lbl_07_30am">07:30AM</string>
+<string name="msg_d_l_m_m_j">D  L  M  M  J  V  S</string>
+<string name="lbl_calculo">Calculo</string>
+<string name="lbl_00_00am">00:00AM</string>
+<string name="lbl_ux">UX</string>
+<string name="lbl_pruebas">Pruebas</string>
+<string name="lbl_algebra_2">Algebra 2</string>
+<string name="lbl_arquitectura">Arquitectura</string>
+<string name="msg_l_m_m_j_v">L  M  M  J  V  S</string>
+<string name="lbl_algebra">Algebra</string>
+<string name="lbl_am">AM</string>
+<string name="lbl_rutinas">Rutinas</string>
+<string name="lbl_d">D  </string>
+<string name="lbl_00_00">00:00</string>
+<string name="lbl_09_00am">09:00AM</string>
+<string name="lbl_tarea_1">Tarea 1</string>
+    <string name="page_tittle_alarmas">Alarmas</string>
+    <string name="page_tittle_rutinas">Rutinas</string>
+    <string name="action_settings">settings</string>
+    <string name="save">Guardar</string>
+    <string name="content_description_save">guardar</string>
+    <string name="more">más</string>
+    <string name="content_description_more">más</string>
+</resources>

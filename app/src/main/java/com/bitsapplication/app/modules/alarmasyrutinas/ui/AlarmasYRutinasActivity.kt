@@ -11,6 +11,7 @@ import com.bitsapplication.app.databinding.ActivityAlarmasYRutinasBinding
 import com.bitsapplication.app.modules.alarmasyrutinas.data.model.GridtitleRowModel
 import com.bitsapplication.app.modules.alarmasyrutinas.data.model.RowRutinasModel
 import com.bitsapplication.app.modules.alarmasyrutinas.data.viewmodel.AlarmasYRutinasVM
+import com.bitsapplication.app.modules.crearalarma.ui.CrearAlarmaActivity
 import com.bitsapplication.app.modules.crearrutina.ui.CrearRutinaActivity
 import com.bitsapplication.app.modules.sesiondeestudio.ui.SesionDeEstudioActivity
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
@@ -114,11 +115,9 @@ class AlarmasYRutinasActivity :
       })
 
     mAddAlarmFab?.setOnClickListener(
-      View.OnClickListener { view: View? ->
-        Toast.makeText(
-          this@AlarmasYRutinasActivity, "Añadir Alarma", Toast.LENGTH_SHORT
-        ).show()
-      })
+    View.OnClickListener { view: View? ->
+      irCrearAlarma(view)
+    })
 
     mStudySessionFab?.setOnClickListener(
       View.OnClickListener { view: View? ->
@@ -154,6 +153,11 @@ class AlarmasYRutinasActivity :
   }
   fun irCrearRutina(view: View?) {
     val intent = Intent(this, CrearRutinaActivity::class.java)
+    startActivity(intent)
+  }
+
+  fun irCrearAlarma(view: View?) {
+    val intent = Intent(this, CrearAlarmaActivity::class.java)
     startActivity(intent)
   }
 

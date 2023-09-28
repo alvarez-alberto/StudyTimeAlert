@@ -28,5 +28,12 @@
             android:exported="true">
 
         </activity>
+        <activity
+            android:name="com.bitsapplication.app.modules.crearalarma.ui.CrearAlarmaActivity"
+            android:screenOrientation="portrait"
+            android:label="Crear Alarma"
+            android:exported="true">
+
+        </activity>
     </application>
 </manifest>
